@@ -5,8 +5,12 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
+// Detecta base pelo env (útil para deploy em subdiretório como GitHub Pages)
+const base = process.env.BASE_URL || "/";
+
 // https://vite.dev/config/
 export default defineConfig({
+  base, // Corrigido para funcionar em Hostinger (raiz) e GitHub Pages (subdiretório)
   plugins: [
     vue({
       template: {
