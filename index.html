@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Luiz Nascimento, Desenvolvedor Web Fullstack especializado em soluções digitais inovadoras.">
+    <meta name="author" content="Luiz Nascimento">
+    <meta name="keywords" content="Desenvolvedor Fullstack, Portfólio, Desenvolvimento Web, Luiz Nascimento, Programação, Projetos Web">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111827">
+    <meta name="color-scheme" content="dark">
+    <!-- Core Web Vitals & SEO meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Performance-focused meta tags -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Luiz Nascimento | Portfólio de Desenvolvedor Web Fullstack</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="mask-icon" href="/favicon.svg" color="#0F172A">
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload critical resources - Otimizado -->
+    <link rel="preload" href="/src/assets/avatar-img.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="/src/entries/main.js" as="script">
+    <link rel="preload" href="/src/assets/main.css" as="style">
+    <link rel="preload" href="/src/components/home/HeroSection.vue" as="script">
+
+    <!-- Adicionando dicas de prioridade para o navegador -->
+    <link rel="modulepreload" href="/src/components/shared/Navigation.vue">
+
+    <!-- Prefetch secondary pages -->
+    <link rel="prefetch" href="/servicos.html">
+    <link rel="prefetch" href="/projetos.html">
+    <link rel="prefetch" href="/contato.html">
+
+    <!-- Fonts with display=swap for better performance -->    <!-- Critical CSS Inline - Otimizado para LCP -->
+    <style>
+      /* CSS crítico para o carregamento inicial - Otimizado para PageSpeed */
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        margin: 0;
+        background-color: #111827; /* bg-gray-900 */
+        color: #f9fafb; /* text-gray-100 */
+        font-family: system-ui, -apple-system, 'Plus Jakarta Sans', sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+        text-rendering: optimizeSpeed;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Hero content - Melhorar LCP */
+      .hero-content {
+        opacity: 1 !important;
+        will-change: auto;
+        contain: content;
+      }
+
+      /* Estados de carregamento */
+      body.loading {
+        cursor: wait;
+      }
+
+      body.loaded * {
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      /* Estilos iniciais para evitar layout shift (CLS) */
+      header {
+        min-height: 80px;
+        contain: layout style;
+      }
+
+      /* Estilos críticos para evitar CLS (Cumulative Layout Shift) */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+      }
+
+      /* Estilo do spinner de carregamento */
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Esqueletos de carregamento para melhorar UX */
+      .skeleton-loading {
+        background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+      }
+
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-jakarta bg-gray-900 transition-colors duration-300">
+    <div id="app"></div>
+    <script type="module" src="/src/entries/main.js"></script>
+  </body>
+</html>

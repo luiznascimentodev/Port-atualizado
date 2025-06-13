@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradientes -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+    <!-- Variações para dark/light mode -->
+    <style>
+      @media (prefers-color-scheme: dark) {
+      #favicon-bg { fill: url(#bgGradient); }
+      #favicon-code { stroke: url(#codeGradient); }
+      }
+      @media (prefers-color-scheme: light) {
+      #favicon-bg { fill: #f8fafc; }
+      #favicon-code { stroke: #1e40af; }
+      }
+    </style>
+  </defs>
+
+  <!-- Fundo simples -->
+  <rect id="favicon-bg" width="512" height="512" rx="64" fill="url(#bgGradient)" />
+
+  <!-- Símbolo de código simplificado -->
+  <path
+    id="favicon-code"
+    d="M 176 256 L 120 192 L 176 128 M 336 256 L 392 192 L 336 128"
+    stroke="url(#codeGradient)"
+    stroke-width="36"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

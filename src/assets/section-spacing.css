@@ -1,0 +1,42 @@
+/* Global Section Spacing CSS */
+
+/* Ajustes para espaçamento entre seções */
+section + section {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Garantir que elementos decorativos não causem overflow */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* Melhorar comportamento de impressão */
+@media print {
+  section {
+    break-inside: avoid;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .print-page-break {
+    break-before: page;
+  }
+
+  /* Reduzir espaçamento para versão impressa */
+  section + section {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Evitar animações em dispositivos de baixo desempenho ou com preferência por movimento reduzido */
+@media (prefers-reduced-motion) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
